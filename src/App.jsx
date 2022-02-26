@@ -6,6 +6,7 @@ const IndexRoute = lazy(() => import('./routes/index'));
 const CarRoute = lazy(() => import('./routes/car'));
 const CubeRoute = lazy(() => import('./routes/cube'));
 const SecondCarRoute = lazy(() => import('./routes/car2'));
+const VideoRoute = lazy(() => import('./routes/video'));
 
 const routes = [
   {
@@ -41,6 +42,15 @@ const routes = [
     element: (
       <Suspense fallback={<div></div>}>
         <SecondCarRoute />
+      </Suspense>
+    ),
+  },
+  {
+    id: 5,
+    path: 'video',
+    element: (
+      <Suspense fallback={<div></div>}>
+        <VideoRoute />
       </Suspense>
     ),
   },

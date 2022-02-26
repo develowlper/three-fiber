@@ -16,6 +16,7 @@ const links = [
   { label: 'Cube', path: '/cube' },
   { label: 'Car', path: '/car' },
   { label: 'Car 2', path: '/car2' },
+  { label: 'Video', path: '/video' },
 ];
 
 export default function Layout() {
