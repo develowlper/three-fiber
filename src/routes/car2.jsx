@@ -2,9 +2,7 @@ import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import {
   MeshReflectorMaterial,
-  Environment,
   Stage,
-  Backdrop,
   PresentationControls,
 } from '@react-three/drei';
 import CarModel from '../components/CarModel';
