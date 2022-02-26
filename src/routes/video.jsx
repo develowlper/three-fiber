@@ -17,7 +17,12 @@ function VideoText({ clicked, ...props }) {
       loop: true,
     })
   );
-  useEffect(() => void (clicked && video.play()), [video, clicked]);
+  useEffect(() => {
+    if (clicked) {
+      video.play();
+    }
+    return () => video.pause();
+  }, [video, clicked]);
   return (
     <Text
       font="video-texture/Inter-Bold.woff"

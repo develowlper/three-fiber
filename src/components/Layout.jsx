@@ -27,17 +27,19 @@ export default function Layout() {
           <Outlet />
         </div>
       </main>
-      <header className=" flex px-3 py-2 col-span-2 absolute top-0 left-0 right-0 bg-white-50 text-white">
-        <h1 className="mr-8">Fun with Three</h1>
-        <nav>
-          <ul className="flex gap-2">
-            {links.map((link) => (
-              <li key={link.path}>
-                <NavLink to={link.path}>{link.label}</NavLink>
-              </li>
-            ))}
-          </ul>
-        </nav>
+      <header className="col-span-2 absolute top-0 left-0 right-0 bg-white-50 text-white">
+        <div className="flex px-3 py-2 bg-[#101010]/50">
+          <h1 className="mr-8">Fun with Three</h1>
+          <nav>
+            <ul className="flex gap-2">
+              {links.map((link) => (
+                <li key={link.path}>
+                  <NavLink to={link.path}>{link.label}</NavLink>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
       </header>
     </>
   );
