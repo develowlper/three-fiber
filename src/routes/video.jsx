@@ -12,7 +12,7 @@ function Carla(props) {
 function VideoText({ clicked, ...props }) {
   const [video] = useState(() =>
     Object.assign(document.createElement('video'), {
-      src: 'video-texture/drei.mp4',
+      src: 'https://hochzeit-f-und-f.fra1.cdn.digitaloceanspaces.com/video/franzi_&_franz%20%28540p%29.mp4',
       crossOrigin: 'Anonymous',
       loop: true,
     })
@@ -25,7 +25,7 @@ function VideoText({ clicked, ...props }) {
       letterSpacing={-0.06}
       {...props}
     >
-      drei
+      F&F
       <meshBasicMaterial toneMapped={false}>
         <videoTexture
           attach="map"
@@ -54,7 +54,7 @@ function Ground() {
     >
       {(Material, props) => (
         <Material
-          color="#a0a0a0"
+          color="#50917D"
           metalness={0.4}
           roughnessMap={floor}
           normalMap={normal}
