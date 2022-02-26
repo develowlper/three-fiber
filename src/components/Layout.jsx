@@ -20,13 +20,16 @@ const links = [
 
 export default function Layout() {
   return (
-    <div className="w-screen h-screen grid grid-cols-layout grid-rows-layout bg-slate-800 text-white">
-      <header className="px-3 py-2 col-span-2 bg-slate-800">
-        <h1>Fun with Three</h1>
-      </header>
-      <aside className="p-2 bg-slate-700">
+    <>
+      <main className="flex-1 h-full absolute top-0 left-0 right-0 bottom-0 bg-slate-800">
+        <div className="h-full">
+          <Outlet />
+        </div>
+      </main>
+      <header className=" flex px-3 py-2 col-span-2 absolute top-0 left-0 right-0 bg-white-50 text-white">
+        <h1 className="mr-8">Fun with Three</h1>
         <nav>
-          <ul>
+          <ul className="flex gap-2">
             {links.map((link) => (
               <li key={link.path}>
                 <NavLink to={link.path}>{link.label}</NavLink>
@@ -34,12 +37,7 @@ export default function Layout() {
             ))}
           </ul>
         </nav>
-      </aside>
-      <main className="flex-1 h-full">
-        <div className="h-full">
-          <Outlet />
-        </div>
-      </main>
-    </div>
+      </header>
+    </>
   );
 }

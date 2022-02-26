@@ -1,13 +1,7 @@
-import * as THREE from 'three';
-import { Suspense, useLayoutEffect } from 'react';
+import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
-import {
-  useGLTF,
-  MeshReflectorMaterial,
-  Environment,
-  Stage,
-  PresentationControls,
-} from '@react-three/drei';
+import { MeshReflectorMaterial, Environment, Stage } from '@react-three/drei';
+import CarModel from '../components/CarModel';
 
 /*
 Author: Steven Grey (https://sketchfab.com/Steven007)
@@ -23,14 +17,13 @@ export default function SecondCarRoute() {
       <fog attach="fog" args={['#101010', 10, 20]} />
       <Suspense fallback={null}>
         <Environment path="/cube" />
-
         <Stage
           environment={null}
           intensity={1}
           contactShadow={false}
           shadowBias={-0.0015}
         >
-          <Model scale={0.01} />
+          <CarModel scale={0.01} />
         </Stage>
         <mesh rotation={[-Math.PI / 2, 0, 0]}>
           <planeGeometry args={[170, 170]} />
