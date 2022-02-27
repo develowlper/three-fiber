@@ -1,4 +1,3 @@
-import { Suspense } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import routes from 'routes';
 
