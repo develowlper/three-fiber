@@ -1,4 +1,5 @@
 import { NavLink as NavLinkBase, Outlet } from 'react-router-dom';
+import routes from 'routes';
 
 const NavLink = (props) => {
   return (
@@ -10,14 +11,6 @@ const NavLink = (props) => {
     />
   );
 };
-
-const links = [
-  { label: 'Home', path: '/' },
-  { label: 'Cube', path: '/cube' },
-  { label: 'Car', path: '/car' },
-  { label: 'Car 2', path: '/car2' },
-  { label: 'Video', path: '/video' },
-];
 
 export default function Layout() {
   return (
@@ -32,9 +25,9 @@ export default function Layout() {
           <h1 className="mr-8">Fun with Three</h1>
           <nav>
             <ul className="flex gap-2">
-              {links.map((link) => (
-                <li key={link.path}>
-                  <NavLink to={link.path}>{link.label}</NavLink>
+              {routes.map((link) => (
+                <li key={link.id}>
+                  <NavLink to={link.to}>{link.label}</NavLink>
                 </li>
               ))}
             </ul>
