@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/develowlper/three-fiber/compare/v0.1.2...v0.1.3) (2022-02-27)
+
+
+### Features
+
+* solar system ([30417a3](https://github.com/develowlper/three-fiber/commit/30417a3a50f5d7ad5632bc0945446a983867cc6f))
+
+
+### Bug Fixes
+
+* unused imports ([036aca7](https://github.com/develowlper/three-fiber/commit/036aca70a24c16322a4f0fa64f1437d55ab03411))
+
 ### [0.1.2](https://github.com/develowlper/three-fiber/compare/v0.1.1...v0.1.2) (2022-02-26)
 
 
