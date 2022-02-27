@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/develowlper/three-fiber/compare/v0.1.3...v0.1.4) (2022-02-27)
+
+
+### Features
+
+* analytics ([babc4bc](https://github.com/develowlper/three-fiber/commit/babc4bce84f5bf6a1166602f99eaa92b346d92b9))
+
 ### [0.1.3](https://github.com/develowlper/three-fiber/compare/v0.1.2...v0.1.3) (2022-02-27)
 
 
