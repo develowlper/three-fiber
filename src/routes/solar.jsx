@@ -2,6 +2,8 @@ import { Sphere } from '@react-three/drei';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useRef } from 'react';
 
+const helperMaterial = { depthTest: false };
+
 const useRotation = () => {
   const ref = useRef();
   useFrame(({ clock }) => {
@@ -19,7 +21,7 @@ const Earth = () => {
   return (
     <Sphere ref={sunRef} args={[1, 6, 6]}>
       <meshPhongMaterial color={'#2233ff'} emissive={'#112244'} />
-      <axesHelper renderOrder={1} material={{ depthTest: false }} />
+      <axesHelper renderOrder={1} material={helperMaterial} />
     </Sphere>
   );
 };
@@ -28,10 +30,10 @@ const EarthOrbit = ({ children }) => {
   const ref = useRotation();
 
   return (
-    <object3D ref={ref} position={[10, 0, 0]}>
+    <mesh ref={ref} position={[10, 0, 0]}>
       {children}
-      <axesHelper renderOrder={1} material={{ depthTest: false }} />
-    </object3D>
+      <axesHelper renderOrder={1} material={helperMaterial} />
+    </mesh>
   );
 };
 
@@ -44,7 +46,7 @@ const Moon = () => {
   return (
     <Sphere ref={moonRef} args={[0.5, 6, 6]}>
       <meshPhongMaterial color={'#888888'} emissive={'#222222'} />
-      <axesHelper renderOrder={1} material={{ depthTest: false }} />
+      <axesHelper renderOrder={1} material={helperMaterial} />
     </Sphere>
   );
 };
@@ -52,10 +54,15 @@ const Moon = () => {
 const MoonOrbit = ({ children }) => {
   const ref = useRotation();
   return (
-    <object3D ref={ref} position={[2, 0, 0]}>
+    <mesh ref={ref} position={[2, 0, 0]}>
       {children}
-      <axesHelper renderOrder={1} material={{ depthTest: false }} />
-    </object3D>
+      <axesHelper renderOrder={1} material={helperMaterial} />
+      <gridHelper
+        args={[2, 2]}
+        material={{ depthTest: false }}
+        renderOrder={1}
+      />
+    </mesh>
   );
 };
 
@@ -65,7 +72,7 @@ const Sun = () => {
   return (
     <Sphere ref={ref} args={[1, 6, 6]} scale={[5, 5, 5]}>
       <meshPhongMaterial emissive={'#FFFF00'} />
-      <axesHelper renderOrder={1} material={{ depthTest: false }} />
+      <axesHelper renderOrder={1} material={helperMaterial} />
     </Sphere>
   );
 };
@@ -74,7 +81,7 @@ const SolarSystem = () => {
   const ref = useRotation();
 
   return (
-    <object3D ref={ref} position={[0, 0, 0]}>
+    <mesh ref={ref} position={[0, 0, 0]}>
       <Sun />
       <EarthOrbit>
         <Earth />
@@ -82,8 +89,8 @@ const SolarSystem = () => {
           <Moon />
         </MoonOrbit>
       </EarthOrbit>
-      <axesHelper renderOrder={1} material={{ depthTest: false }} />
-    </object3D>
+      <axesHelper renderOrder={1} material={helperMaterial} />
+    </mesh>
   );
 };
 

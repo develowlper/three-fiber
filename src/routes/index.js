@@ -7,10 +7,9 @@ const SecondCarRoute = lazy(() => import('./car2'));
 const VideoRoute = lazy(() => import('./video'));
 const SceneRoute = lazy(() => import('./scene'));
 const SolarRoute = lazy(() => import('./solar'));
-
+const ShoesRoute = lazy(() => import('./shoes'));
 const routes = [
   {
-    id: 1,
     index: true,
     label: 'Home',
     to: '/',
@@ -21,7 +20,6 @@ const routes = [
     ),
   },
   {
-    id: 2,
     path: 'cube',
     label: 'Cube',
     to: '/cube',
@@ -32,7 +30,6 @@ const routes = [
     ),
   },
   {
-    id: 3,
     path: 'car',
     label: 'Car',
     to: '/car',
@@ -43,7 +40,6 @@ const routes = [
     ),
   },
   {
-    id: 4,
     path: 'car2',
     label: 'Car 2',
     to: '/car2',
@@ -54,7 +50,6 @@ const routes = [
     ),
   },
   {
-    id: 5,
     path: 'video',
     label: 'Video',
     to: '/video',
@@ -65,7 +60,6 @@ const routes = [
     ),
   },
   {
-    id: 6,
     path: 'scene',
     label: 'Scene',
     to: '/scene',
@@ -76,7 +70,6 @@ const routes = [
     ),
   },
   {
-    id: 7,
     path: 'solar',
     label: 'Solar',
     to: '/solar',
@@ -86,6 +79,16 @@ const routes = [
       </Suspense>
     ),
   },
-];
+  {
+    path: 'shoes',
+    label: 'Shoes',
+    to: '/shoes',
+    element: (
+      <Suspense fallback={<p className="text-white">Loading...</p>}>
+        <ShoesRoute />
+      </Suspense>
+    ),
+  },
+].map((x, index) => ({ ...x, id: index + 1 }));
 
 export default routes;

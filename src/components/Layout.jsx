@@ -15,7 +15,7 @@ const NavLink = (props) => {
 export default function Layout() {
   return (
     <>
-      <main className="flex-1 h-full absolute top-0 left-0 right-0 bottom-0 bg-[#101010]">
+      <main className="flex-1 h-full absolute top-0 left-0 right-0 bottom-0 bg-white">
         <div className="h-full">
           <Outlet />
         </div>
