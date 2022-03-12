@@ -8,6 +8,10 @@ const VideoRoute = lazy(() => import('./video'));
 const SceneRoute = lazy(() => import('./scene'));
 const SolarRoute = lazy(() => import('./solar'));
 const ShoesRoute = lazy(() => import('./shoes'));
+const StageRoute = lazy(() => import('./stage'));
+const SpotsRoute = lazy(() => import('./spots'));
+const KleinzRoute = lazy(() => import('./kleinz'));
+
 const routes = [
   {
     index: true,
@@ -86,6 +90,36 @@ const routes = [
     element: (
       <Suspense fallback={<p className="text-white">Loading...</p>}>
         <ShoesRoute />
+      </Suspense>
+    ),
+  },
+  {
+    path: 'stage',
+    label: 'Stage',
+    to: '/stage',
+    element: (
+      <Suspense fallback={<p className="text-white">Loading...</p>}>
+        <StageRoute />
+      </Suspense>
+    ),
+  },
+  {
+    path: 'spots',
+    label: 'Spots',
+    to: '/spots',
+    element: (
+      <Suspense fallback={<p className="text-white">Loading...</p>}>
+        <SpotsRoute />
+      </Suspense>
+    ),
+  },
+  {
+    path: 'kleinz',
+    label: 'Kleinz',
+    to: '/kleinz',
+    element: (
+      <Suspense fallback={<p className="text-white">Loading...</p>}>
+        <KleinzRoute />
       </Suspense>
     ),
   },
