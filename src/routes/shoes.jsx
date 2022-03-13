@@ -5,16 +5,12 @@ import { Suspense } from 'react';
 
 export default function Shoes() {
   return (
-    <Canvas
-      // shadows
-      // dpr={[1, 2]}
-      camera={{ position: [0, 0, 150], fov: 40 }}
-    >
+    <Canvas shadows dpr={[1, 2]} camera={{ position: [0, 0, 150], fov: 40 }}>
       <Suspense fallback={null}>
         <Stage
-        // environment="city"
-        // intensity={0.5}
-        // contactShadow={{ opacity: 0.7, blur: 2 }}
+          environment="city"
+          intensity={0.5}
+          contactShadow={{ opacity: 0.7, blur: 2 }}
         >
           <Shoe color="tomato" position={[0, 0, 0]} />
           <Shoe
@@ -24,7 +20,7 @@ export default function Shoes() {
             position={[0, 0, -2]}
           />
         </Stage>
-        {/* <BakeShadows /> */}
+        <BakeShadows />
       </Suspense>
       <OrbitControls autoRotate />
     </Canvas>

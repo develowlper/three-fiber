@@ -1,12 +1,6 @@
-import {
-  BakeShadows,
-  OrbitControls,
-  Plane,
-  Sphere,
-  Stage,
-} from '@react-three/drei';
+import { BakeShadows, OrbitControls, Sphere, Stage } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
-import Shoe from 'components/Shoe';
+
 import { Suspense } from 'react';
 
 export default function Shoes() {
