@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/develowlper/three-fiber/compare/v0.1.4...v0.1.5) (2022-03-13)
+
+
+### Features
+
+* more routes ([badfb67](https://github.com/develowlper/three-fiber/commit/badfb67345b4fcfc09ca52655151b652921fc7dc))
+* shoes route ([9f79386](https://github.com/develowlper/three-fiber/commit/9f79386e2e0c9eba0baf1f11dc35bd69d2bd3637))
+
 ### [0.1.4](https://github.com/develowlper/three-fiber/compare/v0.1.3...v0.1.4) (2022-02-27)
 
 
